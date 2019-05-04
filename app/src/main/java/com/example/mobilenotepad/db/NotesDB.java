@@ -8,11 +8,11 @@ import android.content.Context;
 import com.example.mobilenotepad.model.Note;
 
 
-@Database(entities = Note.class, version = 1,exportSchema = false)
+@Database(entities = Note.class, version = 1)
 public abstract class NotesDB extends RoomDatabase {
     public abstract NotesDao notesDao();
 
-    private static final String DATABSE_NAME = "notesDb";
+    public static final String DATABSE_NAME = "notesDb";
     private static NotesDB instance;
 
     public static NotesDB getInstance(Context context) {
